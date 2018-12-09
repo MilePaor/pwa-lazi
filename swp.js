@@ -21,7 +21,7 @@ async function networkFirst(req) {
 }
 
 async function cacheFirst(req) {
-  console.log("req", req);
+  // console.log("req", req);
 
   const cachedResponse = await caches.match(req);
   return cachedResponse || fetch(req);

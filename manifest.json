@@ -2,7 +2,7 @@
   "name": "Laži",
   "short_name": "Laži",
   "theme_color": "#e54949",
-  "background_color": "#2196f3",
+  "background_color": "#e54949",
   "display": "standalone",
   "start_url": ".",
   "icons": [

@@ -18,6 +18,7 @@ function scrollDetect() {
 async function updateSource() {
   const res = await fetch("https://newsapi.org/v1/sources");
   const json = await res.json();
+
   sourceSelector.innerHTML = json.sources
     .map(src => `<option value="${src.id}">${src.name}</option>`)
     .join("\n");
@@ -28,6 +29,11 @@ async function updateNews(source = defaultSource) {
     `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`
   );
   const json = await res.json();
+
+  console.log("res = await fetch", res);
+  console.log(".json()", json);
+
+  // console.log("dzej", json);
 
   loader.style.display = "none";
 
