@@ -10,6 +10,9 @@ main {
   width: 90%;
   margin: 0 auto;
   margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .app-name {
   font-size: 30px;
@@ -33,6 +36,8 @@ main {
   margin: 10px 0;
   border: 1px solid black;
   background-color: white;
+  width: 48%;
+  align-self: flex-start;
 }
 .article--long h2::after {
   content: "...";
@@ -65,4 +70,11 @@ svg {
   height: 100px;
   margin: 20px;
   display: inline-block;
+}
+@media only screen and (max-width: 600px) {
+  .article {
+    width: 100%;
+  }
+  main {
+  }
 }
